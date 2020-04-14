@@ -1,3 +1,31 @@
+.images-h1 {
+    padding-left: 38%;
+    margin-bottom: auto;
+}
+
+.grid-box img {
+    height: 300px;
+    width: 300px;
+
+}
+
+.profile{
+  border-radius: 50%;
+  width: 300px;
+}
+
+.home-body{
+  background-color: black;
+}
+
+.NavBar{
+  padding: 0px !important;
+}
+
+.BobRoss{
+  padding-top: 10px;
+}
+
 .App {
   text-align: center;
 }
