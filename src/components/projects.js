@@ -3,11 +3,20 @@ import { Grid, Cell, Card, CardTitle, CardText, CardMenu, IconButton } from 'rea
 
 
 class Projects extends Component{
+  handleScroll(e) {
+    console.log( window.pageYOffset)
+    window.scrollTo({
+  top: 0,
+  behavior: "smooth"
+});
+  }
+
   render(){
     return(
-      <div >
-        <div>
-          <Grid container spacing={24} direction="column" align="center">
+      <div>
+        <div className = "projects-body">
+          <a href="#top"><button id="btnScrollToTop"><img src="arrow.png"/></button></a>
+          <Grid container spacing={24} direction="column" align="center" id = "top">
             <Cell col={12}>
             <a href="https://github.com/saagarparikh/MissionForward"><img className = "profile" src="missionforward.png"/> </a>
             <h4> Mission Forward is a project that helps soon-to-be college students navigate their personal and professional lives after HS.</h4>

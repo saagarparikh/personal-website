@@ -4,10 +4,17 @@ import { Grid, Cell, Card, CardTitle, CardText, CardMenu, IconButton } from 'rea
 
 
 class Home extends Component{
+  componentDidMount() {
+    console.log(window.pageYOffset)
+  }
+
+  printYOffset(){
+    console.log(window.pageYOffset)
+  }
   render(){
     return(
       <div >
-        <div>
+        <div className = "home-body">
           <Grid container spacing={24} direction="column" align="center">
             <Cell col={12}>
               <img className = "profile" src="profile.jpg"/>
