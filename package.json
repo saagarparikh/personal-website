@@ -2,7 +2,6 @@
   "name": "website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://saagarparikh.github.io/185-HW",
   "dependencies": {
     "@material-ui/core": "^4.9.11",
     "@testing-library/jest-dom": "^4.2.4",
@@ -25,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

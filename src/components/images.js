@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Cell, Card, CardTitle, CardText, CardMenu, IconButton, Button } from 'react-mdl';
+import arrow from './arrow.png'
 import Lightbox from 'fslightbox-react';
 
 
@@ -44,7 +45,7 @@ class Images extends Component{
     }
     return(
       <div className = "images-body">
-        <a href="#top"><button id="btnScrollToTop"><img src="arrow.png"/></button></a>
+        <a href="#top"><button id="btnScrollToTop"><img src={arrow}/></button></a>
         <h1 className = "images-h1" id = "top">My Favorite Albums</h1>
         <Grid container spacing={24} direction="column" align="center">
           <Cell col={4}>

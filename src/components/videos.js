@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Player } from 'video-react';
 import { Grid, Cell, Row, Card, CardTitle, CardText, CardMenu, IconButton } from 'react-mdl';
+import arrow from './arrow.png'
 
 
 class Videos extends Component{
@@ -14,7 +15,7 @@ class Videos extends Component{
   render(){
     return(
       <div className = "videos-body">
-        <a href="#top"><button id="btnScrollToTop"><img src="arrow.png"/></button></a>
+        <a href="#top"><button id="btnScrollToTop"><img src={arrow}/></button></a>
         <Grid container spacing={24} direction="column" align="center" id = "top">
           <Cell col={4}>
             <h4>Kobe Bryant Highlights</h4>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import profile from './profile.jpg'
 import { Grid, Cell, Card, CardTitle, CardText, CardMenu, IconButton } from 'react-mdl';
 
 
@@ -17,7 +17,7 @@ class Home extends Component{
         <div className = "home-body">
           <Grid container spacing={24} direction="column" align="center">
             <Cell col={12}>
-              <img className = "profile" src="profile.jpg"/>
+              <img className = "profile" src={profile}/>
               <h1>Hi! I'm Saagar, nice to meet you.</h1>
               <hr></hr>
               <h4>This website tells you a little bit about myself. There are 4 tabs, as seen on the top right.</h4>
