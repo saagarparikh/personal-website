@@ -12,7 +12,6 @@ class App extends Component {
             <Layout>
                 <Header title={<Link style={{textDecoration: 'none', color: 'white'}} to="/">Saagar Parikh</Link>} scroll>
                     <Navigation>
-                      <NavLink exact activeClassName = "active-nav-tab" to="/">Home</NavLink>
                       <NavLink exact activeClassName = "active-nav-tab" to="/home">Home</NavLink>
                       <NavLink exact activeClassName = "active-nav-tab" to="/images">Images</NavLink>
                       <NavLink exact activeClassName = "active-nav-tab" to="/videos">Videos</NavLink>
