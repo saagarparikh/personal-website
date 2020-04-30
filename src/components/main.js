@@ -8,11 +8,10 @@ import Projects from './projects';
 
 const Main = () => (
   <Switch>
-    <Route exact path = "/" component={Home}/>
-    <Route exact path = "/personal-website" component={Home}/>
+    <Route exact path = {process.env.PUBLIC_URL + "/" } component={Home}/>
     <Route exact path = "/home" component={Home}/>
     <Route path = "/images" component={Images}/>
-    <Route path = "/videos" component={Videos}/>
+    <Route path = "/videos"  component={Videos}/>
     <Route path = "/projects" component={Projects}/>
   </Switch>
 )
