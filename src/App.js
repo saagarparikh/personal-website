@@ -8,48 +8,48 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeHome: true,
-      activeImages: false,
-      activeVideos: false,
-      activeProjects: false,
-    };
+      home: true,
+      images: false,
+      videos: false,
+      projects: false,
+    }
   }
 
-  setActiveHome = (e) => {
+  setActiveTabHome = (e) => {
     this.setState({
-      activeHome: true,
-      activeImages: false,
-      activeVideos: false,
-      activeProjects: false,
+      home: true,
+      images: false,
+      videos: false,
+      projects: false
     });
   }
 
-  setActiveImages = (e) => {
+  setActiveTabProjects = (e) => {
     this.setState({
-      activeHome: false,
-      activeImages: true,
-      activeVideos: false,
-      activeProjects: false,
+      home: false,
+      images: false,
+      videos: false,
+      projects: true
+    });
+  }
+  setActiveTabImages = (e) => {
+    this.setState({
+      home: false,
+      images: true,
+      videos: false,
+      projects: false
     });
   }
 
-  setActiveVideos = (e) => {
+  setActiveTabVideos = (e) => {
     this.setState({
-      activeHome: false,
-      activeImages: false,
-      activeVideos: true,
-      activeProjects: false,
+      home: false,
+      images: false,
+      videos: true,
+      projects: false,
     });
   }
 
-  setActiveProjects = (e) => {
-    this.setState({
-      activeHome: false,
-      activeImages: false,
-      activeVideos: false,
-      activeProjects: true,
-    });
-  }
   render() {
     return (
       <div>
@@ -57,10 +57,10 @@ class App extends Component {
             <Layout>
                 <Header title={<Link style={{textDecoration: 'none', color: 'white'}} to="/">Saagar Parikh</Link>} scroll>
                     <Navigation>
-                      <NavLink exact className = {this.state.activeHome && 'active-nav-tab'} onClick={this.setActiveHome} to="/home">Home</NavLink>
-                      <NavLink exact className = {this.state.activeImages && 'active-nav-tab'} onClick={this.setActiveImages} to="/images">Images</NavLink>
-                      <NavLink exact className = {this.state.activeVideos && 'active-nav-tab'} onClick={this.setActiveVideos} to="/videos">Videos</NavLink>
-                      <NavLink exact className = {this.state.activeProjects && 'active-nav-tab'} onClick={this.setActiveProjects} to="/projects">Projects</NavLink>
+                      <NavLink exact className = {this.state.home && 'active-nav-tab'} onClick={this.setActiveTabHome} to="/home">Home</NavLink>
+                      <NavLink exact className = {this.state.images && 'active-nav-tab'} onClick={this.setActiveTabImages} to="/images">Images</NavLink>
+                      <NavLink exact className = {this.state.videos && 'active-nav-tab'} onClick={this.setActiveTabVideos} to="/videos">Videos</NavLink>
+                      <NavLink exact className = {this.state.projects && 'active-nav-tab'} onClick={this.setActiveTabProjects} to="/projects">Projects</NavLink>
                     </Navigation>
                 </Header>
                 <Drawer title="Title">
