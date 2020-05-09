@@ -72,8 +72,9 @@ function GuestBook() {
       }
       firebase.database().ref('data').push().set(jsonBody)
       setValidated(true);
+      alert("Form has been submitted!")
       //event.preventDefault();
-      event.stopPropagation();
+      //event.stopPropagation();
     }
   };
 
