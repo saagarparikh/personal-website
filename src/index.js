@@ -7,6 +7,7 @@ import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
 import 'video-react/dist/video-react.css';
 import {BrowserRouter} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <BrowserRouter>

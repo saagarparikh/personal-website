@@ -12,6 +12,7 @@ class App extends Component {
       images: false,
       videos: false,
       projects: false,
+      guestbook: false,
     }
   }
 
@@ -20,7 +21,8 @@ class App extends Component {
       home: true,
       images: false,
       videos: false,
-      projects: false
+      projects: false,
+      guestbook: false,
     });
   }
 
@@ -29,7 +31,8 @@ class App extends Component {
       home: false,
       images: false,
       videos: false,
-      projects: true
+      projects: true,
+      guestbook: false,
     });
   }
   setActiveTabImages = (e) => {
@@ -37,7 +40,8 @@ class App extends Component {
       home: false,
       images: true,
       videos: false,
-      projects: false
+      projects: false,
+      guestbook: false,
     });
   }
 
@@ -47,6 +51,17 @@ class App extends Component {
       images: false,
       videos: true,
       projects: false,
+      guestbook: false,
+    });
+  }
+
+  setGuestBook = (e) => {
+    this.setState({
+      home: false,
+      images: false,
+      videos: false,
+      projects: false,
+      guestbook: true,
     });
   }
 
@@ -61,6 +76,7 @@ class App extends Component {
                       <NavLink exact className = {this.state.images && 'active-nav-tab'} onClick={this.setActiveTabImages} to="/images">Images</NavLink>
                       <NavLink exact className = {this.state.videos && 'active-nav-tab'} onClick={this.setActiveTabVideos} to="/videos">Videos</NavLink>
                       <NavLink exact className = {this.state.projects && 'active-nav-tab'} onClick={this.setActiveTabProjects} to="/projects">Projects</NavLink>
+                      <NavLink exact className = {this.state.guestbook && 'active-nav-tab'} onClick={this.setGuestBook} to="/guestbook">GuestBook</NavLink>
                     </Navigation>
                 </Header>
                 <Drawer title="Title">
@@ -69,6 +85,7 @@ class App extends Component {
                       <NavLink exact to="/images">Images</NavLink>
                       <NavLink exact to="/videos">Videos</NavLink>
                       <NavLink exact to="/projects">Projects</NavLink>
+                      <NavLink exact to="/guestbook">GuestBook</NavLink>
                     </Navigation>
                 </Drawer>
                 <Content>
