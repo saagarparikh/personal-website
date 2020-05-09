@@ -48,7 +48,7 @@ function GuestBook() {
       event.preventDefault();
       event.stopPropagation();
     }else{
-      //event.preventDefault();
+      event.preventDefault();
       Date.prototype.yyyymmdd = function() {
         var mm = this.getMonth() + 1; // getMonth() is zero-based
         var dd = this.getDate();
