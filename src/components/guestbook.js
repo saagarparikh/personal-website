@@ -71,8 +71,8 @@ function GuestBook() {
         date: date.yyyymmdd()
       }
       firebase.database().ref('data').push().set(jsonBody)
-      //event.preventDefault();
-      //event.stopPropagation();
+      event.preventDefault();
+      event.stopPropagation();
     }
   };
 
