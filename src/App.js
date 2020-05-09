@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      home: true,
+      home: false,
       images: false,
       videos: false,
       projects: false,

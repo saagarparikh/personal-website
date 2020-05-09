@@ -71,7 +71,8 @@ function GuestBook() {
         date: date.yyyymmdd()
       }
       firebase.database().ref('data').push().set(jsonBody)
-      event.preventDefault();
+      setValidated(true);
+      //event.preventDefault();
       event.stopPropagation();
     }
   };
@@ -159,9 +160,10 @@ function GuestBook() {
                 return(
                   <div className="message">
                     <p>{a.date}</p>
-                    <p><h3 id="messageName">{a.name}</h3> <h5 id="messageBio">{a.description}</h5></p>
+                    <h3 id="messageName">{a.name}</h3>
+                    <h5 id="messageBio">{a.description}</h5>
 
-                    <p> <b>Message: </b> {a.message}</p>
+                    <b>Message: </b> {a.message}
                   </div>
                 ); })
             }
