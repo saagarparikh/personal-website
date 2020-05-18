@@ -4,7 +4,8 @@ import Home from './home';
 import Images from './images';
 import Videos from './videos';
 import Projects from './projects';
-import GuestBook from './guestbook'
+import GuestBook from './guestbook';
+import Movies from './movies';
 
 
 const Main = () => (
@@ -15,6 +16,7 @@ const Main = () => (
     <Route path = "/videos"  component={Videos}/>
     <Route path = "/projects" component={Projects}/>
     <Route path = "/guestbook" component={GuestBook}/>
+    <Route path = "/movies" component={Movies}/>
   </Switch>
 )
 

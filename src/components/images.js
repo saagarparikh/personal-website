@@ -18,7 +18,7 @@ class Images extends Component{
       img6: "https://upload.wikimedia.org/wikipedia/en/e/ee/Watch_The_Throne.jpg",
 
     };
-}
+  }
 
   toggleLightbox = (e) => {
     this.setState({

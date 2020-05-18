@@ -69,7 +69,7 @@ class App extends Component {
     return (
       <div>
         <div id = "navbar" className="demo-big-content">
-            <Layout>
+            <Layout className = "NavBar">
                 <Header title={<Link style={{textDecoration: 'none', color: 'white'}} to="/">Saagar Parikh</Link>} scroll>
                     <Navigation>
                       <NavLink exact className = {this.state.home && 'active-nav-tab'} onClick={this.setActiveTabHome} to="/home">Home</NavLink>
