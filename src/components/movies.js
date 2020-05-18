@@ -16,7 +16,7 @@ class Movies extends Component{
 
   componentDidMount(){
     for(var i = 0; i<this.state.movie_ids.length; i++){
-      var curr_url = "http://www.omdbapi.com/?apikey=513d830e&i=" + this.state.movie_ids[i]
+      var curr_url = "https://www.omdbapi.com/?apikey=513d830e&i=" + this.state.movie_ids[i]
       axios.get(curr_url).then(res => {
         this.setState({
           movie_data: this.state.movie_data.concat(res["data"])
