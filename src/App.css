@@ -45,30 +45,38 @@
   font-size: 3vh;
 }
 
+.movies-lightbox-wrapper{
+  text-align: center;
+
+}
+
 .bg-modal{
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.8);
   position: absolute;
-  top: 0;
-  display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  top: 0px;
+  left: 0px;
 }
-
 .modal-content{
   width: 40%;
-  height: 50%;
+  height: 60%;
   background: white;
 }
 
 .movies-modal-content{
-  width: 40%;
-  height: 30%;
   background: white;
   display: flex;
   padding: 1%;
+  margin: auto;
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  height: 40%;
+  position: absolute;
 }
 
 .movie-info-modal{
@@ -79,6 +87,11 @@
 .movie-img-modal{
   width: 30%;
   height: 100%;
+}
+
+.delete-movie{
+  background-color: red !important;
+  border-color: red !important;
 }
 
 /* Videos Styling */
