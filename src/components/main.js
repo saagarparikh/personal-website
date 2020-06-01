@@ -12,7 +12,8 @@ import CreateList from './create-list';
 
 const Main = () => (
   <Switch>
-    <Route exact path = {process.env.PUBLIC_URL + "/" } component={Home}/>
+    //<Route exact path = {process.env.PUBLIC_URL + "/" } component={Home}/>
+    
     <Route exact path = "/home" component={Home}/>
     <Route path = "/images" component={Images}/>
     <Route path = "/videos"  component={Videos}/>
