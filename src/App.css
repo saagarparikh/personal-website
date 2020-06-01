@@ -47,6 +47,7 @@
 
 .movies-lightbox-wrapper{
   text-align: center;
+  font-size: 3vh;
 
 }
 
@@ -72,10 +73,10 @@
   display: flex;
   padding: 1%;
   margin: auto;
-  top: 20%;
-  left: 30%;
-  width: 40%;
-  height: 40%;
+  top: 15%;
+  left: 10%;
+  width: 80%;
+  height: 50%;
   position: absolute;
 }
 
@@ -89,9 +90,22 @@
   height: 100%;
 }
 
+.movie-list-dropdown{
+  width: 20% !important;
+  height: 100% !important;
+}
+
 .delete-movie{
   background-color: red !important;
   border-color: red !important;
+  position: absolute !important;
+  font-size: 1.5vh !important;
+}
+
+.add-to-list-dropdown{
+  width: 50% !important;
+  height: 5% !important;
+  font-size: 1.5vh !important;
 }
 
 /* Videos Styling */
@@ -191,23 +205,31 @@ iframe {
 .movie-rating{
   background-color: yellow;
   padding: 1%;
-  width: 100%;
+  width: 20%;
   height: 10%;
   text-align: left;
   color: black;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
 
 .movie-rating-text{
-  margin-bottom: 100%;
+  margin-bottom: 0%;
 }
 
 .movie-info-modal h2{
-  font-size: 3vh;
+  font-size: 2vh;
 }
 
 .movie-info-modal p{
   font-size: 1.5vh;
+}
+
+.search-bar{
+  margin-right: 2%;
+}
+
+.list-dropdown-wrapper{
+  margin-bottom: 3% !important;
 }
 
 

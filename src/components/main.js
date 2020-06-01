@@ -7,6 +7,7 @@ import Projects from './projects';
 import GuestBook from './guestbook';
 import Movies from './movies';
 import AddMovie from './add-movie';
+import CreateList from './create-list';
 
 
 const Main = () => (
@@ -19,6 +20,7 @@ const Main = () => (
     <Route path = "/guestbook" component={GuestBook}/>
     <Route path = "/movies" component={Movies}/>
     <Route path = "/add-movie" component={AddMovie}/>
+    <Route path = "/create-list" component={CreateList}/>
   </Switch>
 )
 

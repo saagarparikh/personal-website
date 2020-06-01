@@ -14,7 +14,8 @@ class App extends Component {
       projects: false,
       guestbook: false,
       movies: false,
-      addMovie: false
+      addMovie: false,
+      createList: false,
     }
   }
 
@@ -27,6 +28,7 @@ class App extends Component {
       guestbook: false,
       movies: false,
       addMovie: false,
+      createList: false,
     });
   }
 
@@ -39,6 +41,7 @@ class App extends Component {
       guestbook: false,
       movies: false,
       addMovie: false,
+      createList: false,
     });
   }
   setActiveTabImages = (e) => {
@@ -50,6 +53,7 @@ class App extends Component {
       guestbook: false,
       movies: false,
       addMovie: false,
+      createList: false,
     });
   }
 
@@ -62,6 +66,7 @@ class App extends Component {
       guestbook: false,
       movies: false,
       addMovie: false,
+      createList: false,
     });
   }
 
@@ -74,6 +79,7 @@ class App extends Component {
       guestbook: true,
       movies: false,
       addMovie: false,
+      createList: false,
     });
   }
 
@@ -86,6 +92,7 @@ class App extends Component {
       guestbook: false,
       movies: true,
       addMovie: false,
+      createList: false,
     });
   }
 
@@ -98,6 +105,20 @@ class App extends Component {
       guestbook: false,
       movies: false,
       addMovie: true,
+      createList: false,
+    });
+  }
+
+  setCreateList = (e) => {
+    this.setState({
+      home: false,
+      images: false,
+      videos: false,
+      projects: false,
+      guestbook: false,
+      movies: false,
+      addMovie: false,
+      createList: true,
     });
   }
 
@@ -115,6 +136,7 @@ class App extends Component {
                       <NavLink exact className = {this.state.guestbook && 'active-nav-tab'} onClick={this.setGuestBook} to="/guestbook">GuestBook</NavLink>
                       <NavLink exact className = {this.state.movies && 'active-nav-tab'} onClick={this.setMovies} to="/movies">Movies</NavLink>
                       <NavLink exact className = {this.state.addMovie && 'active-nav-tab'} onClick={this.setAddMovie} to="/add-movie">Add Movie</NavLink>
+                      <NavLink exact className = {this.state.createList && 'active-nav-tab'} onClick={this.setCreateList} to="/create-list">Create List</NavLink>
 
                     </Navigation>
                 </Header>
@@ -126,6 +148,7 @@ class App extends Component {
                       <NavLink exact to="/projects">Projects</NavLink>
                       <NavLink exact to="/guestbook">GuestBook</NavLink>
                       <NavLink exact to="/movies">Movies</NavLink>
+                      <NavLink exact to="/create-list">Create List</NavLink>
                     </Navigation>
                 </Drawer>
                 <Content>
