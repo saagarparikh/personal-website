@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Player } from 'video-react';
 import { Grid, Cell, Row, Card, CardTitle, CardText, CardMenu, IconButton } from 'react-mdl';
 import arrow from './arrow.png'
 
