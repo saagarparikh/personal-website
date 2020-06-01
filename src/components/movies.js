@@ -27,7 +27,8 @@ class Movies extends Component{
       movieLists: [],
       searchValue: "",
       listLimit: 8,
-      showLoadMore: true
+      showLoadMore: true,
+      currList: "",
     };
 
   }
@@ -88,6 +89,10 @@ class Movies extends Component{
 
 
      })
+
+     this.setState({
+       currList: "All"
+     });
    }
 
   toggleLightbox = (e) => {
@@ -138,7 +143,6 @@ class Movies extends Component{
   handleSearchSubmit = (e) => {
     e.preventDefault();
     var search_result = [];
-    alert(this.state.all_movie_data.length)
     for(var i = 0; i<this.state.all_movie_data.length; i++){
       console.log(this.state.all_movie_data[i])
       if(this.state.all_movie_data[i]["Title"] == this.state.searchValue){
@@ -155,7 +159,7 @@ class Movies extends Component{
   }
 
   handleListChange = (e) => {
-
+    var list_title = e.target.value;
     var list_name = e.target.value + "-list" ;
     if(list_name == "All-list"){
       list_name = "all-movies";
@@ -198,9 +202,11 @@ class Movies extends Component{
           });
          }
     })
-    e.target.value = "Select List to View";
     this.setState({
       listLimit: 8
+    })
+    this.setState({
+      currList: list_title
     })
   }
 
@@ -215,9 +221,7 @@ class Movies extends Component{
       addToListConfirm: true
     })
 
-    if(this.state.showLoadMore == false){
-      window.location.reload(false);
-    }
+    window.location.reload(false);
 
 
   }
@@ -267,6 +271,10 @@ class Movies extends Component{
     return(
       <div className = "images-body">
         <Grid align="center">
+          <Cell>
+            <h1>{this.state.currList} Movies</h1>
+            <hr></hr>
+          </Cell>
           <Cell className="list-dropdown-wrapper" col={12} phone={6}>
             <h5>Select List to View</h5>
             <select placeholder="Select List" className = "movie-list-dropdown" onChange = {this.handleListChange}>
