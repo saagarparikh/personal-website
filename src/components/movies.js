@@ -172,6 +172,9 @@ class Movies extends Component{
 
     ref.on('value', snapshot => {
          var curr_state = snapshot.val()
+         if(curr_state == null){
+
+         }else{
 
          var keys = Object.keys(curr_state)
          for(var i = 0; i<keys.length; i++){
@@ -201,6 +204,11 @@ class Movies extends Component{
               movie_data: movies_data})
           });
          }
+       }
+    })
+    this.setState({
+      movie_ids: movies,
+      movie_data: movies_data,
     })
     this.setState({
       listLimit: 8
